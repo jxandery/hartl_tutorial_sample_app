@@ -15,7 +15,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     #within(".alert") do
       #assert_page_has_content("#whatever you think the error message should be")
     #end
-    end
   end
 
   test 'valid signup information' do
