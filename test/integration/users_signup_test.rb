@@ -12,6 +12,10 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_template 'users/new'
     assert_select 'div#<CSS id for error explanation>'
     assert_select 'div=alert alert-danger'
+    within(".alert") do
+      assert_page_has_content("#whatever you think the error message should be")
+    end
+    end
   end
 
   test 'valid signup information' do
