@@ -14,8 +14,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password_confirmation: "bar"}
     end
     assert_template 'users/new'
-    assert_select 'div#<CSS id for error explanation>'
-    assert_select 'div=alert alert-danger'
+    assert_select 'div#error_explanation'
+    assert_select 'div.alert'
     #within(".alert") do
       #assert_page_has_content("#whatever you think the error message should be")
     #end
